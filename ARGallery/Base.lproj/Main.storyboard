@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iAd-6b-NjH">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -10,36 +10,38 @@
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="ARGallery" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Xzm-nW-iFz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arView>
+                    <tabBarItem key="tabBarItem" title="Item" id="zcS-0C-9s4"/>
                     <navigationItem key="navigationItem" id="o6h-jO-in4"/>
                     <connections>
-                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
-                        <outlet property="viewForAR" destination="8bC-Xf-vdC" id="oxX-xy-AwZ"/>
+                        <outlet property="arView" destination="Xzm-nW-iFz" id="qou-rp-wq9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="-2578" y="610"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rVg-qZ-jb4">
+        <!--Tab Bar Controller-->
+        <scene sceneID="HIx-dD-bVK">
             <objects>
-                <navigationController id="JFa-pd-Ieq" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0E-l9-xkr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <tabBarController id="iAd-6b-NjH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="URg-Md-oZq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="E08-Ek-Nah" kind="relationship" relationship="rootViewController" id="fx2-db-2mS"/>
+                        <segue destination="E08-Ek-Nah" kind="relationship" relationship="viewControllers" id="LGj-OQ-F3P"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="PVj-2o-DYZ"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ths-Pa-nJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Si7-Wg-lZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1706" y="134"/>
+            <point key="canvasLocation" x="-3663" y="161"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="KHi-rT-26S">
@@ -74,9 +76,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="Random Pic"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="JzE-QZ-48l"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-1C-3tY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="220"/>
@@ -86,6 +85,7 @@
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sH5-9U-Fgb"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mpu-jA-zjA"/>
                     <navigationItem key="navigationItem" title="Main Menu" id="GK9-Fm-rMN"/>
                     <connections>
                         <outlet property="imageValue" destination="c5S-1C-3tY" id="swZ-e1-phg"/>
@@ -94,7 +94,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz0-oH-NtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="lF4-EK-Ceq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-839.13043478260875" y="133.69565217391306"/>
+            <point key="canvasLocation" x="-2577" y="-205"/>
         </scene>
     </scenes>
 </document>

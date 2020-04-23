@@ -12,13 +12,25 @@ import ARKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
-    @IBOutlet var viewForAR: ARView!
+    @IBOutlet var arView: ARView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let viewInAR = try! MyScene.loadSpace()
+        arView?.scene.anchors.append(viewInAR)
+        
+        
+        //let anchor = AnchorEntity(plane: .vertical)
+        //arView.scene.addAnchor(anchor)
+        
+        //var imageInAR = Entity()
+        //imageInAR.findEntity(named: "frame")
+        
+        //let ARScene = try! MyScene.loadSpace()
+        //arView.scene.anchors.append(viewInAR)
     }
-    
+   
     let imagePicker = UIImagePickerController()
 
     @IBAction func takePhotoButton(_ sender: Any) {
@@ -40,5 +52,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBOutlet weak var imageValue: UIImageView!
-    
 }
+
+/* extension MyScene.Space {
+    var imageInFrame: Entity? {
+        return frame
+    }
+}
+*/
