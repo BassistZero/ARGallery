@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arView>
-                    <tabBarItem key="tabBarItem" title="Item" id="zcS-0C-9s4"/>
+                    <tabBarItem key="tabBarItem" title="AR" image="arkit" catalog="system" id="zcS-0C-9s4"/>
                     <navigationItem key="navigationItem" id="o6h-jO-in4"/>
                     <connections>
                         <outlet property="arView" destination="Xzm-nW-iFz" id="qou-rp-wq9"/>
@@ -51,41 +51,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="photoLibraryButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-o6-rfo">
-                                <rect key="frame" x="66" y="526" width="282" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="photoLibraryButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH9-o6-rfo">
+                                <rect key="frame" x="69" y="531" width="282" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Photo Library"/>
+                                <state key="normal" title="Photo Library">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="photoLibraryButton:" destination="lF4-EK-Ceq" eventType="touchUpInside" id="nWV-Jt-Zq0"/>
                                     <action selector="photoLibraryButton:" destination="E08-Ek-Nah" eventType="touchUpInside" id="nYR-vC-XqM"/>
                                     <action selector="pickImageFromPhotos:" destination="lF4-EK-Ceq" eventType="touchUpInside" id="IA4-ql-POW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="TakePhotoButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-QE-Cc2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="TakePhotoButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-QE-Cc2">
                                 <rect key="frame" x="72" y="412" width="270" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Take a Photo"/>
+                                <state key="normal" title="Take a Photo">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="takePhotoButton:" destination="E08-Ek-Nah" eventType="touchUpInside" id="lui-ym-5K5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="randomPicButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW3-kP-Ll5">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="randomPicButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW3-kP-Ll5">
                                 <rect key="frame" x="80" y="298" width="254" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Random Pic"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="50"/>
+                                <state key="normal" title="Random Pic">
+                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-1C-3tY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="sH5-9U-Fgb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mpu-jA-zjA"/>
+                    <tabBarItem key="tabBarItem" title="Main Menu" image="house.fill" catalog="system" id="mpu-jA-zjA"/>
                     <navigationItem key="navigationItem" title="Main Menu" id="GK9-Fm-rMN"/>
                     <connections>
                         <outlet property="imageValue" destination="c5S-1C-3tY" id="swZ-e1-phg"/>
@@ -97,4 +103,8 @@
             <point key="canvasLocation" x="-2577" y="-205"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arkit" catalog="system" width="128" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
 </document>

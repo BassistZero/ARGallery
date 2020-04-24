@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var arView: ARView?
     
+    let frameAR = Entity()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +56,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageValue: UIImageView!
 }
 
-/* extension MyScene.Space {
+/*
+extension MyScene.Space {
     var imageInFrame: Entity? {
         return frame
     }
-}
-*/
+    */
