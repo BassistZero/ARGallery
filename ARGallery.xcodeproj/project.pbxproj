@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F69C1797244F9D730006E8B8 /* MyScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = F6ED0DA5244F9CC50056F47C /* MyScene.rcproject */; };
 		F6B22F59244899CF005BB6E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B22F58244899CF005BB6E7 /* AppDelegate.swift */; };
 		F6B22F5B244899CF005BB6E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B22F5A244899CF005BB6E7 /* ViewController.swift */; };
 		F6B22F60244899CF005BB6E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B22F5E244899CF005BB6E7 /* Main.storyboard */; };
@@ -48,7 +47,6 @@
 		F6B22F76244899D2005BB6E7 /* ARGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B22F7A244899D2005BB6E7 /* ARGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGalleryUITests.swift; sourceTree = "<group>"; };
 		F6B22F7C244899D2005BB6E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6ED0DA5244F9CC50056F47C /* MyScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = MyScene.rcproject; path = /Users/bassistzero/Desktop/Code/ARGallery/ARGallery/MyScene.rcproject; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 				F6B22F58244899CF005BB6E7 /* AppDelegate.swift */,
 				F6B22F5A244899CF005BB6E7 /* ViewController.swift */,
 				F6B22F5E244899CF005BB6E7 /* Main.storyboard */,
-				F6ED0DA5244F9CC50056F47C /* MyScene.rcproject */,
 				F6B22F61244899D2005BB6E7 /* Assets.xcassets */,
 				F6B22F63244899D2005BB6E7 /* LaunchScreen.storyboard */,
 				F6B22F66244899D2005BB6E7 /* Info.plist */,
@@ -259,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69C1797244F9D730006E8B8 /* MyScene.rcproject in Sources */,
 				F6B22F5B244899CF005BB6E7 /* ViewController.swift in Sources */,
 				F6B22F59244899CF005BB6E7 /* AppDelegate.swift in Sources */,
 			);

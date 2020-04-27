@@ -14,27 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet var arView: ARView?
     
-    let frameAR = Entity()
+    @IBOutlet weak var imageValue: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let viewInAR = try! MyScene.loadSpace()
-        arView?.scene.anchors.append(viewInAR)
-        
-        
-        //let anchor = AnchorEntity(plane: .vertical)
-        //arView.scene.addAnchor(anchor)
-        
-        //var imageInAR = Entity()
-        //imageInAR.findEntity(named: "frame")
-        
-        //let ARScene = try! MyScene.loadSpace()
-        //arView.scene.anchors.append(viewInAR)
-    }
-   
-    let imagePicker = UIImagePickerController()
-
     @IBAction func takePhotoButton(_ sender: Any) {
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -47,18 +28,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+   
+    let imagePicker = UIImagePickerController()
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imageValue.image = image
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    @IBOutlet weak var imageValue: UIImageView!
 }
-
-/*
-extension MyScene.Space {
-    var imageInFrame: Entity? {
-        return frame
-    }
-    */
