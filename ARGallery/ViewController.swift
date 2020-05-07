@@ -32,8 +32,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     var grids = [Grid]()
-    var image: UIImage?
-    var photo: PhotoModel?
     var imageValue: UIImage? = UIImage(named: "mona-lisa")!
     
     
@@ -132,30 +130,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         arView.scene.rootNode.addChildNode(paintingNode)
         grid.removeFromParentNode()
-    }
-}
-
-extension UIImageView {
-    func loadImage(by imageURL: String) {
-        let url = URL(string: imageURL)!
-        
-        let cache = URLCache.shared
-        let request = URLRequest(url: url)
-        
-        if let imageData = cache.cachedResponse(for: request)?.data {
-            self.image = UIImage(data: imageData)
-        } else {
-            URLSession.shared.dataTask(with: request) { (data, response, _) in
-                DispatchQueue.main.async {
-                    guard let data = data, let response = response else {
-                        return
-                    }
-                    let cacheResponse = CachedURLResponse(response: response, data: data)
-                }
-            }.resume()
-        }
-        
-        //let data = try! Data(contentsOf: url)
-        //self.image = UIImage(data: data)
     }
 }
