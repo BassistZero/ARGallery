@@ -11,14 +11,14 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="ARGallery" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Xzm-nW-iFz">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zZs-fZ-hjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arView>
+                    </arscnView>
                     <tabBarItem key="tabBarItem" title="AR" image="arkit" catalog="system" id="zcS-0C-9s4"/>
                     <navigationItem key="navigationItem" id="o6h-jO-in4"/>
                     <connections>
-                        <outlet property="arView" destination="Xzm-nW-iFz" id="qou-rp-wq9"/>
+                        <outlet property="arView" destination="zZs-fZ-hjO" id="Dtd-LS-Ql8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,27 +73,13 @@
                                     <action selector="takePhotoButton:" destination="E08-Ek-Nah" eventType="touchUpInside" id="lui-ym-5K5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="randomPicButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW3-kP-Ll5">
-                                <rect key="frame" x="80" y="291" width="254" height="72"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="50"/>
-                                <state key="normal" title="Random Pic">
-                                    <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5S-1C-3tY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sH5-9U-Fgb" firstAttribute="trailing" secondItem="ZPA-QE-Cc2" secondAttribute="trailing" constant="72" id="6xe-gy-HVk"/>
-                            <constraint firstItem="ZPA-QE-Cc2" firstAttribute="top" secondItem="qW3-kP-Ll5" secondAttribute="bottom" constant="60" id="9a5-ov-s1B"/>
                             <constraint firstItem="QH9-o6-rfo" firstAttribute="leading" secondItem="sH5-9U-Fgb" secondAttribute="leading" constant="66" id="MI3-ei-LHT"/>
                             <constraint firstItem="sH5-9U-Fgb" firstAttribute="trailing" secondItem="QH9-o6-rfo" secondAttribute="trailing" constant="66" id="Txb-SB-vIP"/>
-                            <constraint firstItem="sH5-9U-Fgb" firstAttribute="trailing" secondItem="qW3-kP-Ll5" secondAttribute="trailing" constant="80" id="d9D-6I-Q2c"/>
                             <constraint firstItem="ZPA-QE-Cc2" firstAttribute="leading" secondItem="sH5-9U-Fgb" secondAttribute="leading" constant="72" id="gmD-cA-a4z"/>
-                            <constraint firstItem="qW3-kP-Ll5" firstAttribute="leading" secondItem="sH5-9U-Fgb" secondAttribute="leading" constant="80" id="ho8-hr-aYM"/>
                             <constraint firstItem="QH9-o6-rfo" firstAttribute="top" secondItem="ZPA-QE-Cc2" secondAttribute="bottom" constant="60" id="lGm-7Z-fCT"/>
                             <constraint firstItem="sH5-9U-Fgb" firstAttribute="bottom" secondItem="QH9-o6-rfo" secondAttribute="bottom" constant="60" id="tHT-cp-bSE"/>
                         </constraints>
@@ -101,9 +87,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Main Menu" image="house.fill" catalog="system" id="mpu-jA-zjA"/>
                     <navigationItem key="navigationItem" title="Main Menu" id="GK9-Fm-rMN"/>
-                    <connections>
-                        <outlet property="imageValue" destination="c5S-1C-3tY" id="swZ-e1-phg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz0-oH-NtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="lF4-EK-Ceq" userLabel="Exit" sceneMemberID="exit"/>
